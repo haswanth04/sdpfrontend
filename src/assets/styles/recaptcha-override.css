@@ -1,0 +1,30 @@
+/* reCAPTCHA Styling Overrides */
+
+/* Target the test message directly */
+.grecaptcha-badge + div,
+.grecaptcha-badge ~ div,
+div[style*="color: red"] {
+  color: rgba(75, 85, 99, 0.8) !important; /* matches neutral-500 with transparency */
+  font-size: 0.875rem !important;
+  font-family: inherit !important;
+  text-align: center !important;
+  background-color: transparent !important;
+}
+
+/* Fix for dark mode */
+.dark .grecaptcha-badge + div,
+.dark .grecaptcha-badge ~ div,
+.dark div[style*="color: red"] {
+  color: rgba(156, 163, 175, 0.8) !important; /* matches dark theme text */
+}
+
+/* Improve iframe appearance */
+iframe[title="reCAPTCHA"] {
+  background-color: transparent !important;
+  border-radius: 4px;
+}
+
+/* Override any inline styles */
+[style*="color: red"] {
+  color: inherit !important;
+} 
